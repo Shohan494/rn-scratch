@@ -1,0 +1,45 @@
+workflow.txt file
+
+1. creating some folders and a file - app/components/Component1/Component1.js
+
+2. removing all codes from index.android.js and rewrite code from scratch
+
+3. code flows like this: 
+	- importing section, 
+	- export default class AwesomeProject extends Component section
+	- AppRegistry section
+
+4. copy everythuing from index.android.js to Component1.js, changing class name and some code in the view - text, registering the class as component via AppRegistry:
+	AppRegistry.registerComponent('Component1', () => Component1);
+
+5. importing the Component1 component in the index.android.js via:
+	import Component1 from './app/components/Component1/Component1';
+
+6. So we get hello from Component1
+
+7. Declaring props in Component.js as:
+	{this.props.message}
+	And output will be in index.android.js:
+	<Component1 message="Hello from message" />
+
+8. for state declare a constructor in Component1.js, then create a name state, then output will be: 
+	{this.state.name}
+
+9. Using conditional as:
+	let name = this.state.showName ? this.state.name : 'No name';
+this means if showName returns negative then the state.name will be changed
+
+10. this pience of code sets the props by default:
+		static defaultProps = {
+		message: "Hi There Deliah!!"
+	}
+But a little change is needed in index.android.js:
+  <View>
+    <Component1 />
+  </View>
+
+11. Created Component2.js in the same way
+
+12. Basic style added using StyleSheet, TochableHighlight, TouchableOpacity, InputText, Switch, ListView, require file from json and show them through ListView
+
+13. Some problems faced at Navigation
